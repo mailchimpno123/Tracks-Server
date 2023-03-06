@@ -3,6 +3,7 @@
 // It must be at the top, otherwise it will give an error
 require('./models/User')
 require('./models/Track')
+require('dotenv').config()
 
 // Node syntax to import modules
 const express = require('express')

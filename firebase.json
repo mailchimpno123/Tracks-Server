@@ -1,15 +1,14 @@
 {
-	"hosting": {
-		"public": "public",
-		"rewrites": [
-			{
-				"source": "**",
-				"function": "api"
-			}
-		]
-	},
-	"functions": {
-		"source": "functions",
-		"runtime": "nodejs16"
-	}
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "functions": {
+    "source": "functions",
+    "runtime": "nodejs16"
+  }
 }

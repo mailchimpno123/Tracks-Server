@@ -1,14 +1,21 @@
 {
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  },
-  "functions": {
-    "source": "functions",
-    "runtime": "nodejs16"
-  }
+	"hosting": {
+		"public": "public",
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+		"headers": [
+			{
+				"source": "/api/**",
+				"headers": [
+					{
+						"key": "Access-Control-Allow-Origin",
+						"value": "*"
+					}
+				]
+			}
+		]
+	},
+	"functions": {
+		"source": "functions",
+		"runtime": "nodejs16"
+	}
 }
